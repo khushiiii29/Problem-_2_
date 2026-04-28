@@ -3,16 +3,7 @@ import { useState, useEffect } from 'react';
 function App() {
     const [count, setCount] = useState(0);
     const [name, setName] = useState('');
-    const [users, setUsers] = useState([]);
-
-
-    useEffect(() => {
-        console.log('Component mounted!');
-
-        // Simulate fetching data
-        const mockUsers = ['Alice', 'Bob', 'Charlie'];
-        setUsers(mockUsers);
-    }, []);
+    
 
     useEffect(() => {
         console.log('Count changed to:', count);
@@ -25,21 +16,26 @@ function App() {
 
     return (
         <div>
-            <h1>useState & useEffect Demo</h1>
+            <h1>useState & useEffect </h1>
 
             <div>
                 <h2>Count: {count}</h2>
                 <button onClick={increment}>
                     + Increment
                 </button>
+                
                 <button onClick={decrement}>
                     - Decrement
                 </button>
+                
                 <button onClick={reset}>
                     Reset
                 </button>
+                
             </div>
+            
             <br /><br />
+            
             <div>
                 <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" />
                 <p>Hello, {name || 'Guest'}!</p>
