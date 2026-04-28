@@ -6,7 +6,6 @@ function App() {
     
 
     useEffect(() => {
-        console.log('Count changed to:', count);
         document.title = `Count: ${count}`;
     }, [count]);
 
